@@ -4,11 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragmnet.AddFragment">
-
-
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <TextView
+            android:text="LIST DUMMY"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+        <GridView
+            android:id="@+id/list_produk"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:columnWidth="150dp"
+            android:horizontalSpacing="20dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/row_layout"/>
+    </LinearLayout>
 
 </FrameLayout>
