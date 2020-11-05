@@ -37,8 +37,9 @@ public class AddFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         helper = new DbHelp(getContext());
-        insertDB();
-        mAdapter = new CursorAdapter(getContext(),helper.select());
+//        insertDB();
+
+        mAdapter = new CursorAdapter(getContext(),helper.Traktor2());
         listProduk.setAdapter(mAdapter);
         listProduk.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

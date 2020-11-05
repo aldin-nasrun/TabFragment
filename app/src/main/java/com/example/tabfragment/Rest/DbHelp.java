@@ -36,6 +36,21 @@ public class DbHelp extends SQLiteOpenHelper {
         return c;
     }
 
+    public Cursor Traktor2() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        mQuery = "SELECT * FROM tb_produk WHERE NAME LIKE '%2'";
+        Cursor c = db.rawQuery(mQuery, null);
+        return c;
+    }
+
+
+    public void delete() {
+        //SQLite Delete ndes
+        SQLiteDatabase db = this.getWritableDatabase();
+        mQuery = "DELETE FROM tb_produk";
+        db.execSQL(mQuery);
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
